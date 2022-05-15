@@ -1,7 +1,7 @@
 <?php echo "" ?>
 
 <html>
-  <body>
+  <body align="center">
     <img src="/uploads/Timage.JPG">
   </body>
 </html>

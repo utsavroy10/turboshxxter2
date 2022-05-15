@@ -2,6 +2,6 @@
 
 <html>
   <body>
-    <img src="http://turboshxxter2.com/public_html/uploads/Timage.JPG">
+    <img src="/uploads/Timage.JPG">
   </body>
 </html>

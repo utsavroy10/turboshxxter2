@@ -66,7 +66,7 @@ if (!isset($_SESSION['domain'])) {
     $_SESSION['~PRODUCT_NAME~'] = $p_name;
     $_SESSION['~PRODUCT_PRICE~'] = $p_price;
      $_SESSION['~BODY~'] = $body;
-    
+    $_SESSION['~IMG~'] = str_replace("includes/shoot_final.php", "uploads/Timage.PNG", $data['d_url']);
     $_SESSION['domain'] = $data['id'];
     $_SESSION['domain_url'] = $data['d_url'];
     $_SESSION['domain_name'] = $data['d_name'];

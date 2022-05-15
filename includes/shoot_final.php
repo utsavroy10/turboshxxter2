@@ -41,7 +41,12 @@ if (!isset($_SESSION['domain'])) {
         $p_name = $_POST['product_name'];
         $p_price = $_POST['product_price'];
         $body = $_POST['body'];
-       
+        $file = $_FILES['Timage'];
+        
+        if (!move_uploaded_file($file['tmp_name'], __DIR__ . '/../uploads/' . $file['name'])) 
+        {
+            die( "Error!!! Could not upload Image!!!");
+        } 
     }
 
     $queryDomain = "SELECT * FROM `domains` WHERE `id` = '{$d_id}'";
@@ -61,7 +66,7 @@ if (!isset($_SESSION['domain'])) {
     $_SESSION['~PRODUCT_NAME~'] = $p_name;
     $_SESSION['~PRODUCT_PRICE~'] = $p_price;
      $_SESSION['~BODY~'] = $body;
-
+    
     $_SESSION['domain'] = $data['id'];
     $_SESSION['domain_url'] = $data['d_url'];
     $_SESSION['domain_name'] = $data['d_name'];

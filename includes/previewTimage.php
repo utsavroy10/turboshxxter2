@@ -1,4 +1,4 @@
-<?php echo "this is test" ?>
+<?php echo "" ?>
 
 <html>
   <body>

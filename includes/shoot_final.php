@@ -214,6 +214,10 @@ if ($ans == 'true') {
                     if (!$resultFlag2) {
                         die("Query Failed 3 " . mysqli_error($con));
                     } else {
+                        $daily_count="update domains set today_fire=(select count(*) from revamp_reports where  substr(sent_date,1,10)=CURRENT_DATE  and domain_id=".$_SESSION['domain'].") where id=".$_SESSION['domain'];
+                        $daily_count_exec=mysqli_query($con,$daily_count);
+                        $total_count="UPDATE domains set total_fire=total_fire+1 where id=".$_SESSION['domain'];
+                        $total_count_exec=mysqli_query($con,$total_count);
                         ?>
 
                         <h1 style='text-align:center; background-color:#333; color:#fff; padding: 16px'>
